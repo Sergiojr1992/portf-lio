@@ -3,15 +3,13 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background: #0d1117;
     color: #c9d1d9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     padding: 20px;
 }
 
 .container {
     max-width: 600px;
+    width: 100%;
+    margin: 50px auto;
     text-align: center;
 }
 
@@ -28,7 +26,6 @@ body {
     from {
         width: 0;
     }
-
     to {
         width: 100%;
     }
@@ -60,21 +57,10 @@ body {
     margin: 10px 0;
 }
 
-    .list-animate li:nth-child(1) {
-        animation-delay: 0.5s;
-    }
-
-    .list-animate li:nth-child(2) {
-        animation-delay: 1s;
-    }
-
-    .list-animate li:nth-child(3) {
-        animation-delay: 1.5s;
-    }
-
-    .list-animate li:nth-child(4) {
-        animation-delay: 2s;
-    }
+.list-animate li:nth-child(1) { animation-delay: 0.5s; }
+.list-animate li:nth-child(2) { animation-delay: 1s; }
+.list-animate li:nth-child(3) { animation-delay: 1.5s; }
+.list-animate li:nth-child(4) { animation-delay: 2s; }
 
 @keyframes slideUp {
     to {
@@ -94,13 +80,14 @@ body {
     transition: background 0.3s ease;
 }
 
-    .btn:hover {
-        background-color: #2ea043;
-    }
+.btn:hover {
+    background-color: #2ea043;
+}
 
 .project {
     margin-top: 30px;
 }
+
 .profile-pic {
     width: 150px;
     height: 150px;
@@ -110,7 +97,6 @@ body {
     margin-bottom: 20px;
     box-shadow: 0 0 15px rgba(0, 255, 213, 0.3);
 }
-
 .project-frame {
     width: 100%;
     max-width: 500px;
@@ -118,4 +104,30 @@ body {
     border: 2px solid #00ffd5;
     border-radius: 10px;
     margin-top: 15px;
+    background-color: white;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        margin-top: 30px;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    .typing-animation {
+        font-size: 20px;
+    }
+
+    .project-frame {
+        height: 300px;
+    }
+
+    .btn {
+        width: 100%;
+        box-sizing: border-box;
+    }
 }
